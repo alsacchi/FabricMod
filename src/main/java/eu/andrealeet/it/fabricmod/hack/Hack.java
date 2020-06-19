@@ -16,7 +16,7 @@ public abstract class Hack extends Feature {
     }
 
     public final String getName() {
-        return (isEnabled() == true ? "§a" : "§f") + name;
+        return (isEnabled() == true ? SECTION_SIGN + "a" : SECTION_SIGN + "f") + name;
     }
 
     public final String getDescription() {

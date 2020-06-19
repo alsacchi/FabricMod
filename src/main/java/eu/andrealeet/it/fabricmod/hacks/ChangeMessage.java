@@ -3,11 +3,12 @@ package eu.andrealeet.it.fabricmod.hacks;
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputEvent;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputListener;
+import net.minecraft.item.ItemStack;
 
 public class ChangeMessage extends Hack implements ChatOutputListener {
 
     public ChangeMessage() {
-        super("Change Chat!", "Changes the word \"test\" to \"tost\"");
+        super("Change Chat!", "Changes a chat message!");
     }
 
     @Override
@@ -22,8 +23,11 @@ public class ChangeMessage extends Hack implements ChatOutputListener {
 
     @Override
     public void onSentMessage(ChatOutputEvent event) {
-        if(event.getOriginalMessage().equalsIgnoreCase("test")) {
-            event.setMessage("tost");
+        if(event.getOriginalMessage().contains("test")) {
+            event.cancel();
+            ItemStack item = MC.player.getMainHandStack();
+            System.out.println(item.getTag().asString());
+            
         }
     }
     

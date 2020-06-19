@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.TreeMap;
 
+import eu.andrealeet.it.fabricmod.hacks.ChangeMessage;
 import eu.andrealeet.it.fabricmod.hacks.GiveTest;
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.hacks.MobESP;
@@ -17,6 +18,7 @@ public class HacksManager {
 	public final MobESP mobESPHack = new MobESP();
 	public final GiveTest giveTestHack = new GiveTest();
 	public final Test testHack = new Test();
+	public final ChangeMessage changeMessageHack = new ChangeMessage();
 	
     private final TreeMap<String, Hack> hax = new TreeMap<>((o1, o2) -> o1.compareToIgnoreCase(o2));
     

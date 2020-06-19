@@ -43,7 +43,7 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity {
             return;
         }
 
-        if(event.isModified()) {
+        if(!event.isModified()) {
             return;
         }
         ChatMessageC2SPacket packet = new ChatMessageC2SPacket(event.getMessage());
