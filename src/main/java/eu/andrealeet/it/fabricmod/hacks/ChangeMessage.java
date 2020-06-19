@@ -26,7 +26,8 @@ public class ChangeMessage extends Hack implements ChatOutputListener {
         if(event.getOriginalMessage().contains("test")) {
             event.cancel();
             ItemStack item = MC.player.getMainHandStack();
-            System.out.println(item.getTag().asString());
+            if(!item.isEmpty())
+                System.out.println(item.getTag().toString());
             
         }
     }
