@@ -6,7 +6,7 @@ import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 public class Test extends Hack implements UpdateListener {
 
     public Test() {
-        super("Test", "Qua test");
+        super("Test", "Testing!");
     }
     
     @Override

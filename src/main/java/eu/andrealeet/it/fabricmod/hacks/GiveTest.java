@@ -10,7 +10,7 @@ import net.minecraft.text.LiteralText;
 public class GiveTest extends Hack {
 
     public GiveTest() {
-        super("GiveTest", "Test");
+        super("GiveTest", "Creative item generator");
     }
 
     @Override

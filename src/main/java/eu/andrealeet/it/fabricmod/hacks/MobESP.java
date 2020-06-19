@@ -8,7 +8,7 @@ import net.minecraft.entity.mob.MobEntity;
 public class MobESP extends Hack implements UpdateListener {
     private Iterable<Entity> entities;
     public MobESP() {
-        super("MobESP", "Vedi i mob");
+        super("MobESP", "Glowing MOBS!");
     }
 
     @Override

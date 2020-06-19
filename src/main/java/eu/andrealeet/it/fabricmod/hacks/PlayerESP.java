@@ -9,7 +9,7 @@ import net.minecraft.client.network.AbstractClientPlayerEntity;
 public class PlayerESP extends Hack implements UpdateListener {
     private List<AbstractClientPlayerEntity> players;
     public PlayerESP() {
-        super("PlayerESP", "Vedi i giocatori");
+        super("PlayerESP", "Glowing PLAYERS!");
     }
 
     @Override
