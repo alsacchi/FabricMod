@@ -1,10 +1,10 @@
-package eu.andrealeet.it.test.gui;
+package eu.andrealeet.it.fabricmod.gui;
 
 import java.util.Collection;
 
-import eu.andrealeet.it.test.HackClient;
-import eu.andrealeet.it.test.HacksManager;
-import eu.andrealeet.it.test.hack.Hack;
+import eu.andrealeet.it.fabricmod.HackClient;
+import eu.andrealeet.it.fabricmod.HacksManager;
+import eu.andrealeet.it.fabricmod.hack.Hack;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.resource.language.I18n;

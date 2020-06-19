@@ -1,9 +1,9 @@
-package eu.andrealeet.it.test.listeners;
+package eu.andrealeet.it.fabricmod.listeners;
 
 import java.util.ArrayList;
 
-import eu.andrealeet.it.test.listener.Event;
-import eu.andrealeet.it.test.listener.Listener;
+import eu.andrealeet.it.fabricmod.listener.Event;
+import eu.andrealeet.it.fabricmod.listener.Listener;
 
 public interface UpdateListener extends Listener {
     

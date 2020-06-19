@@ -1,4 +1,4 @@
-package eu.andrealeet.it.test.mixin;
+package eu.andrealeet.it.fabricmod.mixin;
 
 import com.mojang.authlib.GameProfile;
 
@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import eu.andrealeet.it.test.HackClient;
-import eu.andrealeet.it.test.listeners.UpdateListener.UpdateEvent;
+import eu.andrealeet.it.fabricmod.HackClient;
+import eu.andrealeet.it.fabricmod.listeners.UpdateListener.UpdateEvent;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;

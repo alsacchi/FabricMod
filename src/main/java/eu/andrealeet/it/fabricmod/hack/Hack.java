@@ -1,6 +1,6 @@
-package eu.andrealeet.it.test.hack;
+package eu.andrealeet.it.fabricmod.hack;
 
-import eu.andrealeet.it.test.Feature;
+import eu.andrealeet.it.fabricmod.Feature;
 
 public abstract class Hack extends Feature {
 

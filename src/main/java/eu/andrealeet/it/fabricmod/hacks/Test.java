@@ -1,7 +1,7 @@
-package eu.andrealeet.it.test.hacks;
+package eu.andrealeet.it.fabricmod.hacks;
 
-import eu.andrealeet.it.test.hack.Hack;
-import eu.andrealeet.it.test.listeners.UpdateListener;
+import eu.andrealeet.it.fabricmod.hack.Hack;
+import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 
 public class Test extends Hack implements UpdateListener {
 

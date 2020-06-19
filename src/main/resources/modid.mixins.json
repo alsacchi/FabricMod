@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "eu.andrealeet.it.test.mixin",
+  "package": "eu.andrealeet.it.fabricmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

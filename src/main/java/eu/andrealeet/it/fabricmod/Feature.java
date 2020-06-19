@@ -1,6 +1,6 @@
-package eu.andrealeet.it.test;
+package eu.andrealeet.it.fabricmod;
 
-import eu.andrealeet.it.test.listener.EventManager;
+import eu.andrealeet.it.fabricmod.listener.EventManager;
 import net.minecraft.client.MinecraftClient;
 
 public abstract class Feature {

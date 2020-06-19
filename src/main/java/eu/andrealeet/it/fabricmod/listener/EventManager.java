@@ -1,11 +1,11 @@
-package eu.andrealeet.it.test.listener;
+package eu.andrealeet.it.fabricmod.listener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
 
-import eu.andrealeet.it.test.HackClient;
+import eu.andrealeet.it.fabricmod.HackClient;
 import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 import net.minecraft.util.crash.CrashReportSection;

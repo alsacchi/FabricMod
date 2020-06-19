@@ -1,6 +1,6 @@
-package eu.andrealeet.it.test.hacks;
+package eu.andrealeet.it.fabricmod.hacks;
 
-import eu.andrealeet.it.test.hack.Hack;
+import eu.andrealeet.it.fabricmod.hack.Hack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundTag;

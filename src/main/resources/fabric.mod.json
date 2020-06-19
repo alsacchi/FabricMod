@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "eu.andrealeet.it.test.TestInit"
+      "eu.andrealeet.it.fabricmod.TestInit"
     ]
   },
   "mixins": [

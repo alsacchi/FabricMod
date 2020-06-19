@@ -1,4 +1,4 @@
-package eu.andrealeet.it.test.listener;
+package eu.andrealeet.it.fabricmod.listener;
 
 import java.util.EventListener;
 

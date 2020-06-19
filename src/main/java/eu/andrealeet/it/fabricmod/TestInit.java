@@ -1,4 +1,4 @@
-package eu.andrealeet.it.test;
+package eu.andrealeet.it.fabricmod;
 
 import net.fabricmc.api.ModInitializer;
 

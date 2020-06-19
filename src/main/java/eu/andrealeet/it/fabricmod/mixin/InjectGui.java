@@ -1,4 +1,4 @@
-package eu.andrealeet.it.test.mixin;
+package eu.andrealeet.it.fabricmod.mixin;
 
 import net.minecraft.client.gui.screen.*;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import eu.andrealeet.it.test.gui.HackOptionsGUI;
+import eu.andrealeet.it.fabricmod.gui.HackOptionsGUI;
 
 @Mixin(SettingsScreen.class)
 public abstract class InjectGui extends Screen {

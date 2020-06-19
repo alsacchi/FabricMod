@@ -1,15 +1,15 @@
-package eu.andrealeet.it.test;
+package eu.andrealeet.it.fabricmod;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.TreeMap;
 
-import eu.andrealeet.it.test.hacks.GiveTest;
-import eu.andrealeet.it.test.hack.Hack;
-import eu.andrealeet.it.test.hacks.MobESP;
-import eu.andrealeet.it.test.hacks.PlayerESP;
-import eu.andrealeet.it.test.hacks.Test;
+import eu.andrealeet.it.fabricmod.hacks.GiveTest;
+import eu.andrealeet.it.fabricmod.hack.Hack;
+import eu.andrealeet.it.fabricmod.hacks.MobESP;
+import eu.andrealeet.it.fabricmod.hacks.PlayerESP;
+import eu.andrealeet.it.fabricmod.hacks.Test;
 
 public class HacksManager {
     
