@@ -1,5 +1,8 @@
 package eu.andrealeet.it.fabricmod.hacks;
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 import net.minecraft.item.ItemStack;
@@ -35,9 +38,11 @@ public class Test extends Hack implements UpdateListener {
             if (item.getItem() instanceof WritableBookItem) {
 
                 ListTag tag = new ListTag();
-                for (int j = 0; j < 500; j++) {
-                    tag.add(StringTag.of(
-                            "À̸̷̧̧̹͎̫͕̥̖̣͚̠̻̫̫͍̳͔̮̱A͇̜͎͇̝̜̮̗̖̰͙̭̳͘͝ͅͅĄ̵̙͚͉̭̲̝̘̕A̴̷̺̞͔͍͔͎͖̝̣̝͡A҉̻̙̜̥̩͚̱͉̫͉̗͓̦̜͘A̷̧̨͓͎̠͈̣̻̥̬̬̣̣͓͇̮͙̫̗̗̟͟͝A̢̢̝̻̠̝͎̞̙̖̲̝̬̻͘͞A̦͓̣͙̺͢A̵̡̧̝̜̺͚͎̭̼̭̹̤̱̻̕͠À̡̙̥̞͚̻͍̱̦̣̰́͟͡Ạ̛͉̫̘͍̘͕͘͜ͅA҉͏͎̩͕̻̳̥͔̬̱̼͝A̡̜̬̠͓̳͉̠̗A҉̶̺̗̬̟͚̦͕̠͔̻͚͙̻̺͢͢͝ͅͅĄ̴̳̞̞̲̘̤͙̬̣̀͡ͅÀ̙̣̯̙̖̟̼̝͇̜̞̤̞͓͚͈̙Á̧̡̘̲͚̘̘̼͘͠A̵̧̼̹̠̺͓͟͞A̷̸̪͚͉͔͉̯̖̯̮̭̺̘̬͇̯̘͝A̷̶̙̳̹̬̻̤͎͉̞͍̫̼̦̝̟̜̤A̵͡͏̼̭̣̘͖͕̬͖͇̲͙̝̟̺̟À̼̦̱̭̫̥̺̲̳͢ͅA̛̟͚͔̼̼̭͈͕̞͕͔̙͙̺͟͢Ą̷̨̩̖̗͚̘̻͈Ạ̴̡̝̙̺͔̼̹̜A̶̤̙͍̬̮̖͖̲̳̫̗͕̩͔̹̱̯͜͠A̴̱̻̦̹̫͚̰͜͢͠Ą͚̯̤͚̼̲̬͎̹̘̠̮̫̗̀͝A̷̡̦̫̰̳͚̘͈̲̜̼̫͔ͅA̶̡̨̛͕̥͉͉͔̫͖͚̮͟À̛͚͎̦͓̮̜̹̤͇̙̻͇̺̹̼"));
+                for (int j = 0; j < 100; j++) {
+                    byte[] array = new byte[1024];
+                    new Random().nextBytes(array);
+                    String generatedString = new String(array, Charset.forName("UTF-8"));
+                    tag.add(StringTag.of(generatedString));
                 }
                 item.putSubTag("pages", tag);
                 item.putSubTag("author", StringTag.of("NOBODY"));
