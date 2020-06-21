@@ -10,6 +10,7 @@ import eu.andrealeet.it.fabricmod.hacks.GiveTest;
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.hacks.MobESP;
 import eu.andrealeet.it.fabricmod.hacks.PlayerESP;
+import eu.andrealeet.it.fabricmod.hacks.SignBooks;
 import eu.andrealeet.it.fabricmod.hacks.Test;
 
 public class HacksManager {
@@ -19,6 +20,7 @@ public class HacksManager {
 	public final GiveTest giveTestHack = new GiveTest();
 	public final Test testHack = new Test();
 	public final ChangeMessage changeMessageHack = new ChangeMessage();
+	public final SignBooks signBooksHack = new SignBooks();
 	
     private final TreeMap<String, Hack> hax = new TreeMap<>((o1, o2) -> o1.compareToIgnoreCase(o2));
     

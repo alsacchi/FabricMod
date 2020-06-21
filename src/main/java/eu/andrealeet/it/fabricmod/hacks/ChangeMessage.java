@@ -4,6 +4,7 @@ import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputEvent;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputListener;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.LiteralText;
 
 public class ChangeMessage extends Hack implements ChatOutputListener {
 
@@ -27,7 +28,7 @@ public class ChangeMessage extends Hack implements ChatOutputListener {
             event.cancel();
             ItemStack item = MC.player.getMainHandStack();
             if(!item.isEmpty())
-                System.out.println(item.getTag().toString());
+                MC.player.addChatMessage(new LiteralText(item.getTag().toString()), false);
             
         }
     }
