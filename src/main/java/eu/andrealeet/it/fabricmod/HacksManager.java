@@ -6,12 +6,14 @@ import java.util.Collections;
 import java.util.TreeMap;
 
 import eu.andrealeet.it.fabricmod.hacks.ChangeMessage;
+import eu.andrealeet.it.fabricmod.hacks.FastBreakHack;
 import eu.andrealeet.it.fabricmod.hacks.GiveTest;
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.hacks.MobESP;
 import eu.andrealeet.it.fabricmod.hacks.PlayerESP;
 import eu.andrealeet.it.fabricmod.hacks.SignBooks;
 import eu.andrealeet.it.fabricmod.hacks.Test;
+import eu.andrealeet.it.fabricmod.hacks.TimerHack;
 
 public class HacksManager {
     
@@ -21,6 +23,8 @@ public class HacksManager {
 	public final Test testHack = new Test();
 	public final ChangeMessage changeMessageHack = new ChangeMessage();
 	public final SignBooks signBooksHack = new SignBooks();
+	public final TimerHack timerHack = new TimerHack();
+	public final FastBreakHack fastBreakHack = new FastBreakHack();
 	
     private final TreeMap<String, Hack> hax = new TreeMap<>((o1, o2) -> o1.compareToIgnoreCase(o2));
     

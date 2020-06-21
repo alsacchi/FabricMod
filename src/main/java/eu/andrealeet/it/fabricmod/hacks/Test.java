@@ -1,13 +1,7 @@
 package eu.andrealeet.it.fabricmod.hacks;
 
-import java.util.Random;
-
 import eu.andrealeet.it.fabricmod.hack.Hack;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
-import io.netty.buffer.Unpooled;
-import net.minecraft.network.packet.c2s.play.CustomPayloadC2SPacket;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.PacketByteBuf;
 
 
 public class Test extends Hack implements UpdateListener {
@@ -29,12 +23,6 @@ public class Test extends Hack implements UpdateListener {
     @Override
     public void onUpdate() {
         MC.player.getHungerManager().add(10, 10);
-        byte[] array = new byte[32627];
-        new Random().nextBytes(array);
-        PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-        buf.writeByteArray(array);
-        MC.player.networkHandler.sendPacket(new CustomPayloadC2SPacket(new Identifier("badlion:mods"), buf));
-        
     }
     
         

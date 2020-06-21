@@ -1,6 +1,7 @@
 package eu.andrealeet.it.fabricmod;
 
 import eu.andrealeet.it.fabricmod.listener.EventManager;
+import eu.andrealeet.it.fabricmod.mixininterfaces.IMinecraftClient;
 import net.minecraft.client.MinecraftClient;
 
 public enum HackClient {
@@ -8,6 +9,7 @@ public enum HackClient {
     INSTANCE;
 
     public static final MinecraftClient MC = MinecraftClient.getInstance();
+    public static final IMinecraftClient IMC = (IMinecraftClient)MC;
     public static final String MC_VERSION = "1.15.2";
 
     private EventManager eventManager;
