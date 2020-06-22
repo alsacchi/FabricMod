@@ -19,11 +19,12 @@ public abstract class InjectGui extends Screen {
 		super(title);
 	}
 	
-	@Inject(at = @At("TAIL"), method = "init()V")
+	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 138, 200, 20, I18n.translate("Open Menu"), (buttonWidget) -> {
+		this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20, I18n.translate("Language Settings"), (buttonWidget) -> {
 			this.minecraft.openScreen(new HackOptionsGUI(new LiteralText("HACK GUI")));
-		 }));
+		}));
+		
 	}
 }
 
