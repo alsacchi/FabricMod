@@ -43,17 +43,13 @@ public abstract class ClientPlayerInteractionManagerMixin implements IClientPlay
 		HackClient.INSTANCE.getEventManager().fire(event);
 	}
 
-	@Inject(at = {@At("HEAD")},
-		method = {"getReachDistance()F"},
-		cancellable = true)
+	@Inject(at = {@At("HEAD")}, method = {"getReachDistance()F"}, cancellable = true)
 	private void onGetReachDistance(CallbackInfoReturnable<Float> ci) {
 		if(overrideReach)
 			ci.setReturnValue(10F);
 	}
 
-	@Inject(at = {@At("HEAD")},
-		method = {"hasExtendedReach()Z"},
-		cancellable = true)
+	@Inject(at = {@At("HEAD")}, method = {"hasExtendedReach()Z"}, cancellable = true)
 	private void hasExtendedReach(CallbackInfoReturnable<Boolean> cir) {
 		if(overrideReach)
 			cir.setReturnValue(true);

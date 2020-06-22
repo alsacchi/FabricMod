@@ -9,11 +9,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import eu.andrealeet.it.fabricmod.mixininterfaces.IClientPlayerInteractionManager;
 import eu.andrealeet.it.fabricmod.mixininterfaces.IMinecraftClient;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.WindowEventHandler;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
+import net.minecraft.util.snooper.SnooperListener;
 import net.minecraft.util.thread.ReentrantThreadExecutor;
 
 @Mixin(MinecraftClient.class)
-public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runnable> implements IMinecraftClient {
+public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runnable> implements SnooperListener, WindowEventHandler,  IMinecraftClient {
     
     @Shadow
     private ClientPlayerInteractionManager interactionManager;
@@ -32,14 +34,14 @@ public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runna
         info.setReturnValue(false);
     }
 
-    @Inject(at = @At("RETURN"), method = "getVersionType()Ljava/lang/String", cancellable = true)
+    @Inject(at = @At("RETURN"), method = "getVersionType()Ljava/lang/String;", cancellable = true)
     public void getVersionType(CallbackInfoReturnable<String> info) {
         info.setReturnValue("release");
     }
 
-    @Inject(at = @At("RETURN"), method = "getGameVersion()Ljava/lang/String", cancellable = true)
+    @Inject(at = @At("RETURN"), method = "getGameVersion()Ljava/lang/String;", cancellable = true)
     public void getGameVersion(CallbackInfoReturnable<String> info) {
-        info.setReturnValue("1.15.2/vanilla");
+        info.setReturnValue("1.15.2");
     }
 
 }
