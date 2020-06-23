@@ -10,9 +10,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action;
 
-public class FastBreakHack extends Hack implements UpdateListener, BlockBreakingProgressListener {
+public class FastBreak extends Hack implements UpdateListener, BlockBreakingProgressListener {
 
-    public FastBreakHack() {
+    public FastBreak() {
         super("Fast Break", "Destroy block faster!");
     }
 
@@ -31,7 +31,7 @@ public class FastBreakHack extends Hack implements UpdateListener, BlockBreaking
     @Override
     public void onUpdate() {
         IMC.getInteractionManager().setBlockHitDelay(0);
-        IMC.getInteractionManager().setOverrideReach(true);
+        
     }
 
     @Override
