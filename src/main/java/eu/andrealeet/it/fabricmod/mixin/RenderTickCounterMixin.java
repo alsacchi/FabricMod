@@ -7,8 +7,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import eu.andrealeet.it.fabricmod.HackClient;
-import eu.andrealeet.it.fabricmod.hacks.TimerHack;
+
+import eu.andrealeet.it.fabricmod.ModClient;
+
+import eu.andrealeet.it.fabricmod.mods.Timer;
 import net.minecraft.client.render.RenderTickCounter;
 
 @Mixin(RenderTickCounter.class)
@@ -22,8 +24,8 @@ public abstract class RenderTickCounterMixin {
 		opcode = Opcodes.PUTFIELD,
 		ordinal = 0)}, method = {"beginRenderTick(J)V"})
 	public void onBeginRenderTick(long long_1, CallbackInfo ci) {
-        TimerHack timerHack = HackClient.INSTANCE.getHax().timerHack;
-		lastFrameDuration *= timerHack.getTimerSpeed();
+        Timer timerMod = ModClient.INSTANCE.getMods().timerMod;
+		lastFrameDuration *= timerMod.getTimerSpeed();
 	}
     
 }

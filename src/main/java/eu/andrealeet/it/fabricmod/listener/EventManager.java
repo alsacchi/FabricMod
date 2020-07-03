@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
 
-import eu.andrealeet.it.fabricmod.HackClient;
+
+import eu.andrealeet.it.fabricmod.ModClient;
 import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 import net.minecraft.util.crash.CrashReportSection;
@@ -14,7 +15,7 @@ public final class EventManager {
     
     private final HashMap<Class<? extends Listener>, ArrayList<? extends Listener>> listenerMap = new HashMap<>();
 
-	public EventManager(HackClient client) {
+	public EventManager(ModClient client) {
     }
 
     public <L extends Listener, E extends Event<L>> void fire(E event) {

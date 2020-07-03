@@ -1,12 +1,13 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
 import java.util.List;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 
-public class PlayerESP extends Hack implements UpdateListener {
+public class PlayerESP extends Mod implements UpdateListener {
     private List<AbstractClientPlayerEntity> players;
     public PlayerESP() {
         super("PlayerESP", "Glowing PLAYERS!");

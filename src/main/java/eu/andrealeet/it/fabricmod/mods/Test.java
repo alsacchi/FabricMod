@@ -1,10 +1,10 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 
-
-public class Test extends Hack implements UpdateListener {
+public class Test extends Mod implements UpdateListener {
 
     public Test() {
         super("Test", "Testing!");
@@ -22,7 +22,6 @@ public class Test extends Hack implements UpdateListener {
 
     @Override
     public void onUpdate() {
-        MC.player.getHungerManager().add(10, 10);
     }
     
         

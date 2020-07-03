@@ -1,11 +1,12 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.MobEntity;
 
-public class MobESP extends Hack implements UpdateListener {
+public class MobESP extends Mod implements UpdateListener {
     private Iterable<Entity> entities;
     public MobESP() {
         super("MobESP", "Glowing MOBS!");

@@ -13,7 +13,7 @@ public final class TestInit implements ModInitializer {
 		// Proceed with mild caution.
 		if(initialized)
 			throw new RuntimeException("Already initialized!");
-		HackClient.INSTANCE.initialize();
+		ModClient.INSTANCE.initialize();
 		initialized = true;
 
 		

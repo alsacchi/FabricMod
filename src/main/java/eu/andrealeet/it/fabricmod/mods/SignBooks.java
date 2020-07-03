@@ -1,9 +1,10 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
 import java.nio.charset.Charset;
 import java.util.Random;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.WritableBookItem;
@@ -12,7 +13,7 @@ import net.minecraft.nbt.StringTag;
 import net.minecraft.network.packet.c2s.play.BookUpdateC2SPacket;
 import net.minecraft.util.Hand;
 
-public class SignBooks extends Hack implements UpdateListener {
+public class SignBooks extends Mod implements UpdateListener {
     private int i = 0;
 
     public SignBooks() {

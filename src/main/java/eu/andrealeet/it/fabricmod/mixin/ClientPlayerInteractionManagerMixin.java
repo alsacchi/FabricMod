@@ -6,7 +6,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import eu.andrealeet.it.fabricmod.HackClient;
+
+import eu.andrealeet.it.fabricmod.ModClient;
 import eu.andrealeet.it.fabricmod.listeners.BlockBreakingProgressEvent;
 import eu.andrealeet.it.fabricmod.mixininterfaces.IClientPlayerInteractionManager;
 import net.minecraft.client.MinecraftClient;
@@ -40,7 +41,7 @@ public abstract class ClientPlayerInteractionManagerMixin implements IClientPlay
 			"updateBlockBreakingProgress(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Z"})
 	private void onPlayerDamageBlock(BlockPos blockPos, Direction direction, CallbackInfoReturnable<Boolean> cir) {
 		BlockBreakingProgressEvent event = new BlockBreakingProgressEvent(blockPos, direction);
-		HackClient.INSTANCE.getEventManager().fire(event);
+		ModClient.INSTANCE.getEventManager().fire(event);
 	}
 
 	@Inject(at = {@At("HEAD")}, method = {"getReachDistance()F"}, cancellable = true)

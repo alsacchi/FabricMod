@@ -2,30 +2,33 @@ package eu.andrealeet.it.fabricmod.gui;
 
 import java.util.Collection;
 
-import eu.andrealeet.it.fabricmod.HackClient;
-import eu.andrealeet.it.fabricmod.HacksManager;
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.ModClient;
+
+import eu.andrealeet.it.fabricmod.ModsManager;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.text.Text;
 
-public class HackOptionsGUI extends Screen {
+public class ModOptionsGUI extends Screen {
     
-    private HacksManager hacksManager = HackClient.INSTANCE.getHax();
+    private ModsManager ModsManager = ModClient.INSTANCE.getMods();
 
-    public HackOptionsGUI(Text title) {
+    public ModOptionsGUI(Text title) {
         super(title);
     }
 
     public void init() {
 
-        Collection<Hack> hacks = hacksManager.getHacks();
+        Collection<Mod> Mods = ModsManager.getMods();
         int i = 0;
-        for(Hack hack : hacks){ 
-            this.addButton(new ButtonWidget(this.width / 2 - 105 + i % 2 * 110, this.height / 6 - 12 + 24 * (i >> 1), 100, 20, I18n.translate(hack.getName()), (buttonWidget) -> {
-                hack.setEnabled(!hack.isEnabled());
-                buttonWidget.setMessage(hack.getName());
+        for(Mod Mod : Mods){ 
+            this.addButton(new ButtonWidget(this.width / 2 - 105 + i % 2 * 110, this.height / 6 - 12 + 24 * (i >> 1), 100, 20, I18n.translate(Mod.getName()), (buttonWidget) -> {
+                Mod.setEnabled(!Mod.isEnabled());
+                buttonWidget.setMessage(Mod.getName());
             }));
             i++;
         }

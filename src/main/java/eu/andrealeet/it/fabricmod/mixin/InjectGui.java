@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import eu.andrealeet.it.fabricmod.gui.HackOptionsGUI;
+import eu.andrealeet.it.fabricmod.gui.ModOptionsGUI;
 
 @Mixin(SettingsScreen.class)
 public abstract class InjectGui extends Screen {
@@ -22,7 +22,7 @@ public abstract class InjectGui extends Screen {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
 		this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20, I18n.translate(""), (buttonWidget) -> {
-			this.minecraft.openScreen(new HackOptionsGUI(new LiteralText("HACK GUI")));
+			this.minecraft.openScreen(new ModOptionsGUI(new LiteralText("Mod GUI")));
 		}));
 		
 	}

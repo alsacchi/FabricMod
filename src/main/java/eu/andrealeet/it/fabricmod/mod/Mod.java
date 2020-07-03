@@ -1,8 +1,8 @@
-package eu.andrealeet.it.fabricmod.hack;
+package eu.andrealeet.it.fabricmod.mod;
 
 import eu.andrealeet.it.fabricmod.Feature;
 
-public abstract class Hack extends Feature {
+public abstract class Mod extends Feature {
 
     private final String name;
     private final String description;
@@ -10,7 +10,7 @@ public abstract class Hack extends Feature {
 
     private boolean enabled = false;
 
-    public Hack(String name, String description) {
+    public Mod(String name, String description) {
         this.name = name;
         this.description = description;
     }

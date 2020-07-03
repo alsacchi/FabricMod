@@ -1,6 +1,7 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.BlockBreakingProgressEvent;
 import eu.andrealeet.it.fabricmod.listeners.BlockBreakingProgressListener;
 import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
@@ -10,7 +11,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action;
 
-public class FastBreak extends Hack implements UpdateListener, BlockBreakingProgressListener {
+public class FastBreak extends Mod implements UpdateListener, BlockBreakingProgressListener {
 
     public FastBreak() {
         super("Fast Break", "Destroy block faster!");

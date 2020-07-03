@@ -1,12 +1,13 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.mixininterfaces.IClientPlayerInteractionManager;
 
-public class Reach extends Hack {
+public class Reach extends Mod {
     
     public Reach() {
-        super("Reach Hack", "Reach at longer distances!");
+        super("Reach Mod", "Reach at longer distances!");
     }
 
     @Override

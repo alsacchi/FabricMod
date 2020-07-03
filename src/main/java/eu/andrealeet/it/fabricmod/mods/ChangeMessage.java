@@ -1,12 +1,11 @@
-package eu.andrealeet.it.fabricmod.hacks;
+package eu.andrealeet.it.fabricmod.mods;
 
-import eu.andrealeet.it.fabricmod.hack.Hack;
+
+import eu.andrealeet.it.fabricmod.mod.Mod;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputEvent;
 import eu.andrealeet.it.fabricmod.listeners.ChatOutputListener;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 
-public class ChangeMessage extends Hack implements ChatOutputListener {
+public class ChangeMessage extends Mod implements ChatOutputListener {
 
     public ChangeMessage() {
         super("Change Chat!", "Changes a chat message!");
@@ -24,12 +23,14 @@ public class ChangeMessage extends Hack implements ChatOutputListener {
 
     @Override
     public void onSentMessage(ChatOutputEvent event) {
-        if(event.getOriginalMessage().contains("test")) {
-            event.cancel();
-            ItemStack item = MC.player.getMainHandStack();
-            if(!item.isEmpty())
-                MC.player.addChatMessage(new LiteralText(item.getTag().toString()), false);
-            
+        String message = event.getOriginalMessage();
+        switch(message) {
+            case "test":
+                event.setMessage("\u5C3A\uD835\uDC1A\uFF2D\u0E04\u24E1\u044F\u0E4F \u722A\u24B6\u24C7\u02B3\uFF2F\u1DB0\u03AD"); 
+                break;
+            case "login":
+                event.setMessage("/login password1");
+                break;
         }
     }
     
