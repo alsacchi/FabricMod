@@ -11,6 +11,6 @@ import net.minecraft.client.ClientBrandRetriever;
 public class ClientBrandRetrieverMixin {
     @Inject(at = @At("RETURN"), method = "getClientModName()Ljava/lang/String;", cancellable = true)
     private static void getClientModName(CallbackInfoReturnable<String> info) {
-        info.setReturnValue("vanilla");
+        info.setReturnValue("\u00A7cEsperimenti di alsacchi, NON CONTIENE MODIFICHE! (https://github.com/alsacchi/fabricmod/)");
     }
 }

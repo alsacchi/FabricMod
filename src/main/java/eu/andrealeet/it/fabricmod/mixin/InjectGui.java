@@ -22,7 +22,7 @@ public abstract class InjectGui extends Screen {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
 		this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20, I18n.translate(""), (buttonWidget) -> {
-			this.minecraft.openScreen(new ModOptionsGUI(new LiteralText("Mod GUI")));
+			this.minecraft.openScreen(new ModOptionsGUI(new LiteralText("This is not a hack client, this contains only EXPERIMENTS!")));
 		}));
 		
 	}

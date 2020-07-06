@@ -27,6 +27,7 @@ import eu.andrealeet.it.fabricmod.mods.SignBooks;
 import eu.andrealeet.it.fabricmod.mods.Test;
 
 import eu.andrealeet.it.fabricmod.mods.Timer;
+import eu.andrealeet.it.fabricmod.mods.Xray;
 
 public class ModsManager {
     
@@ -40,7 +41,8 @@ public class ModsManager {
 	public final FastBreak fastBreakMod = new FastBreak();
 	public final Reach reachMod = new Reach();
 	public final FlyJump flyJumpMod = new FlyJump();
-	
+	public final Xray xrayMod = new Xray();
+
     private final TreeMap<String, Mod> mods = new TreeMap<>((o1, o2) -> o1.compareToIgnoreCase(o2));
     
     public ModsManager() {

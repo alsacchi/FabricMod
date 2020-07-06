@@ -10,7 +10,14 @@
     "ClientPlayerInteractionManagerMixin",
     "RenderTickCounterMixin",
     "MinecraftClientMixin",
-    "ClientBrandRetrieverMixin" 
+    "ClientBrandRetrieverMixin",
+    "BlockEntityRenderDispatcherMixin",
+    "BlockMixin",
+    "BlockModelRendererMixin",
+    "ChunkOcclusionGraphBuilderMixin",
+    "FluidRendererMixin",
+    "TerrainRenderContextMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1
