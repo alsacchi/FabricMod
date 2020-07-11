@@ -2,8 +2,6 @@ package eu.andrealeet.it.fabricmod.mods;
 
 import eu.andrealeet.it.fabricmod.mod.Mod;
 import net.minecraft.network.packet.c2s.play.UpdateSignC2SPacket;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.Text;
 
 import java.nio.charset.Charset;
 import java.util.Random;
