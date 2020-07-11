@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 import eu.andrealeet.it.fabricmod.mixininterfaces.IClientPlayerInteractionManager;
 import eu.andrealeet.it.fabricmod.mixininterfaces.IMinecraftClient;
+import net.minecraft.SharedConstants;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.WindowEventHandler;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
@@ -41,7 +42,8 @@ public abstract class MinecraftClientMixin extends ReentrantThreadExecutor<Runna
 
     @Inject(at = @At("RETURN"), method = "getGameVersion()Ljava/lang/String;", cancellable = true)
     public void getGameVersion(CallbackInfoReturnable<String> info) {
-        info.setReturnValue("1.15.2");
+        info.setReturnValue(SharedConstants.getGameVersion().getName());
     }
+    
 
 }
