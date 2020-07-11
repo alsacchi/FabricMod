@@ -7,7 +7,7 @@ import eu.andrealeet.it.fabricmod.mixininterfaces.IClientPlayerInteractionManage
 public class Reach extends Mod {
     
     public Reach() {
-        super("Reach Mod", "Reach at longer distances!");
+        super("Long Hand", "Hit at longer distances!");
     }
 
     @Override

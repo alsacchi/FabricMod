@@ -14,7 +14,7 @@ import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket.Action;
 public class FastBreak extends Mod implements UpdateListener, BlockBreakingProgressListener {
 
     public FastBreak() {
-        super("Fast Break", "Destroy block faster!");
+        super("Fast.Break", "Destroy block faster!");
     }
 
     @Override

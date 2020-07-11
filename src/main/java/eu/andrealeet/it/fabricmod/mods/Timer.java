@@ -6,7 +6,7 @@ import eu.andrealeet.it.fabricmod.mod.Mod;
 public class Timer extends Mod {
     
     public Timer() {
-        super("Timer Mod", "Speeds up almost everything!");
+        super("Double Time", "Speeds up almost everything!");
     }
 
     public float getTimerSpeed() {

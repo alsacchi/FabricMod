@@ -11,13 +11,12 @@ public enum ModClient {
     public static final MinecraftClient MC = MinecraftClient.getInstance();
     public static final IMinecraftClient IMC = (IMinecraftClient)MC;
     public static final String MC_VERSION = "1.15.2";
+    public static final String VERSION = "vanilla";
 
     private EventManager eventManager;
     private ModsManager ModsManager;
 
     public void initialize() {
-
-        System.out.println("Initializing Andrea TEST MOD!");
         eventManager = new EventManager(this);
         ModsManager = new ModsManager();
     }

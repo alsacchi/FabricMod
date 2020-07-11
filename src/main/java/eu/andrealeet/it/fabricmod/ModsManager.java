@@ -17,7 +17,7 @@ import eu.andrealeet.it.fabricmod.mods.GiveTest;
 import eu.andrealeet.it.fabricmod.mod.Mod;
 
 import eu.andrealeet.it.fabricmod.mods.MobESP;
-
+import eu.andrealeet.it.fabricmod.mods.NoFall;
 import eu.andrealeet.it.fabricmod.mods.PlayerESP;
 
 import eu.andrealeet.it.fabricmod.mods.Reach;
@@ -27,6 +27,7 @@ import eu.andrealeet.it.fabricmod.mods.SignBooks;
 import eu.andrealeet.it.fabricmod.mods.Test;
 
 import eu.andrealeet.it.fabricmod.mods.Timer;
+import eu.andrealeet.it.fabricmod.mods.UltraBright;
 import eu.andrealeet.it.fabricmod.mods.Xray;
 
 public class ModsManager {
@@ -42,6 +43,8 @@ public class ModsManager {
 	public final Reach reachMod = new Reach();
 	public final FlyJump flyJumpMod = new FlyJump();
 	public final Xray xrayMod = new Xray();
+	public final NoFall noFallMod = new NoFall();
+	public final UltraBright ultraBrightMod = new UltraBright();
 
     private final TreeMap<String, Mod> mods = new TreeMap<>((o1, o2) -> o1.compareToIgnoreCase(o2));
     
@@ -53,7 +56,6 @@ public class ModsManager {
 				
 				Mod Mod = (Mod)field.get(this);
 				mods.put(Mod.getName(), Mod);
-				System.out.println(Mod.getName());
 			}
 			
 		} catch(Exception e) {

@@ -9,7 +9,7 @@ import net.minecraft.entity.mob.MobEntity;
 public class MobESP extends Mod implements UpdateListener {
     private Iterable<Entity> entities;
     public MobESP() {
-        super("MobESP", "Glowing MOBS!");
+        super("Mob Glowing", "Glowing MOBS!");
     }
 
     @Override

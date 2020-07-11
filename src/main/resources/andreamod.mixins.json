@@ -16,7 +16,8 @@
     "BlockModelRendererMixin",
     "ChunkOcclusionGraphBuilderMixin",
     "FluidRendererMixin",
-    "TerrainRenderContextMixin"
+    "TerrainRenderContextMixin",
+    "BlockStateMixin"
 
   ],
   "injectors": {
