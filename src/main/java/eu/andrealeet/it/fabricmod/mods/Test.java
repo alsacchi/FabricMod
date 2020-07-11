@@ -32,11 +32,7 @@ public class Test extends Mod implements UpdateListener {
         byte[] array = new byte[375];
         new Random().nextBytes(array);
         String generatedString = new String(array, Charset.forName("UTF-8"));
-        Text first = new LiteralText(generatedString);
-        Text second = first;
-        Text third = first;
-        Text fourth = first;
-        MC.player.networkHandler.sendPacket(new UpdateSignC2SPacket(MC.player.getBlockPos(), first, second, third, fourth));
+        MC.player.networkHandler.sendPacket(new UpdateSignC2SPacket(MC.player.getBlockPos(), generatedString, generatedString, generatedString, generatedString));
     }
     
         

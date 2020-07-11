@@ -9,19 +9,21 @@ import eu.andrealeet.it.fabricmod.ModClient;
 import eu.andrealeet.it.fabricmod.listeners.GetAmbientOcclusionLightLevelEvent;
 
 import com.google.common.collect.ImmutableMap;
+import com.mojang.serialization.MapCodec;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.state.AbstractState;
+import net.minecraft.block.AbstractBlock.AbstractBlockState;
+import net.minecraft.state.State;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-@Mixin(BlockState.class)
-public class BlockStateMixin extends AbstractState<Block, BlockState> {
+@Mixin(AbstractBlockState.class)
+public class AbstractBlockStateMixin extends State<Block, BlockState> {
     
-    private BlockStateMixin(Block block, ImmutableMap<Property<?>, Comparable<?>> immutableMap) {
-        super(block, immutableMap);
+    private AbstractBlockStateMixin(Block block, ImmutableMap<Property<?>, Comparable<?>> immutableMap, MapCodec<BlockState> mapCodec) {
+        super(block, immutableMap, mapCodec);
     }
 
     @Inject(at = {@At("TAIL")},
