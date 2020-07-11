@@ -10,7 +10,7 @@ import net.minecraft.client.network.AbstractClientPlayerEntity;
 public class PlayerESP extends Mod implements UpdateListener {
     private List<AbstractClientPlayerEntity> players;
     public PlayerESP() {
-        super("PlayerESP", "Glowing PLAYERS!");
+        super("Player Glowing", "Glowing PLAYERS!");
     }
 
     @Override

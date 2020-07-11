@@ -41,10 +41,10 @@ public abstract class BlockModelRendererMixin {
 
         ShouldDrawSideEvent drawEvent = new ShouldDrawSideEvent(state);
         ModClient.INSTANCE.getEventManager().fire(drawEvent);
-        if(drawEvent.isRendered()) {
+        if(Boolean.TRUE.equals(drawEvent.isRendered())) {
             return;
         }
-        renderSmooth(view, model, state, pos, buffer, vertexConsumer, cull, random, seed, overlay);
+        renderSmooth(view, model, state, pos, buffer, vertexConsumer, false, random, seed, overlay);
     }
 
     @Shadow

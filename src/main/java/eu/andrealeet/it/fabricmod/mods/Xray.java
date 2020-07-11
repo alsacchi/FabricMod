@@ -19,6 +19,7 @@ import eu.andrealeet.it.fabricmod.mod.Mod;
 import net.minecraft.block.Block;
 import net.minecraft.util.registry.Registry;
 
+
 public class Xray extends Mod implements UpdateListener, SetOpaqueCubeListener, GetAmbientOcclusionLightLevelListener, ShouldDrawSideListener, TesselateBlockListener, RenderBlockEntityListener {
 
     private final List<String> ores = Arrays.asList("minecraft:anvil", "minecraft:beacon", "minecraft:bone_block", "minecraft:bookshelf", "minecraft:brewing_stand",
@@ -40,7 +41,7 @@ public class Xray extends Mod implements UpdateListener, SetOpaqueCubeListener, 
                                                     "minecraft:water");
 
     public Xray() {
-        super("Xray", "See every ore!");
+        super("See ores!", "See every ore!");
     }
 
     @Override
@@ -68,7 +69,7 @@ public class Xray extends Mod implements UpdateListener, SetOpaqueCubeListener, 
 
     @Override
     public void onUpdate() {
-        MC.options.gamma = 16F;
+        MC.options.gamma = 16;
     }
 
     @Override

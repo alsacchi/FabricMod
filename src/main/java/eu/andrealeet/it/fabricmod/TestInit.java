@@ -1,7 +1,6 @@
 package eu.andrealeet.it.fabricmod;
 
 import net.fabricmc.api.ModInitializer;
-
 public final class TestInit implements ModInitializer {
 	
 	private static boolean initialized;
@@ -15,7 +14,5 @@ public final class TestInit implements ModInitializer {
 			throw new RuntimeException("Already initialized!");
 		ModClient.INSTANCE.initialize();
 		initialized = true;
-
-		
 	}
 }

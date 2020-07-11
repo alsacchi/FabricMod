@@ -8,7 +8,7 @@ import eu.andrealeet.it.fabricmod.listeners.UpdateListener;
 public class FlyJump extends Mod implements UpdateListener {
 
     public FlyJump() {
-        super("FlyJump", "Fly like you are jumping constantly!");
+        super("Vola", "Vola like you are jumping constantly!");
     }
 
     @Override
