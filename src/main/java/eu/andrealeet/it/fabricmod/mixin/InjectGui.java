@@ -1,8 +1,9 @@
 package eu.andrealeet.it.fabricmod.mixin;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.*;
+import net.minecraft.client.gui.screen.options.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.resource.language.I18n;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 
@@ -13,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import eu.andrealeet.it.fabricmod.gui.ModOptionsGUI;
 
-@Mixin(SettingsScreen.class)
+@Mixin(OptionsScreen.class)
 public abstract class InjectGui extends Screen {
 	public InjectGui(Text title) {
 		super(title);
@@ -21,8 +22,8 @@ public abstract class InjectGui extends Screen {
 	
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20, I18n.translate(""), (buttonWidget) -> {
-			this.minecraft.openScreen(new ModOptionsGUI(new LiteralText("This is not a hack client, this contains only EXPERIMENTS!")));
+		this.addButton(new ButtonWidget(this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20, new LiteralText(""), (buttonWidget) -> {
+			MinecraftClient.getInstance().openScreen(new ModOptionsGUI(new LiteralText("This is not a hack client, this contains only EXPERIMENTS!")));
 		}));
 		
 	}

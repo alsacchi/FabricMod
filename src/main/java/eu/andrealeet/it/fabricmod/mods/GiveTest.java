@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.CreativeInventoryActionC2SPacket;
 
-public class GiveTest extends Mod implements UpdateListener{
+public class GiveTest extends Mod implements UpdateListener {
     private final ItemStack item = new ItemStack(Items.WRITABLE_BOOK, 1);
     public GiveTest() {
         super("GiveTest", "Creative item generator");
@@ -27,7 +27,7 @@ public class GiveTest extends Mod implements UpdateListener{
     @Override
     public void onUpdate() {
         for(int i = 0; i < 9; i++) {
-            if(MC.player.inventory.getInvStack(i).isEmpty())
+            if(MC.player.inventory.getStack(i).isEmpty())
                 MC.player.networkHandler.sendPacket(new CreativeInventoryActionC2SPacket(i+36, item));
 
             
